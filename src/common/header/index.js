@@ -109,7 +109,7 @@ const mapStateToProps=(state)=>{
 const mapDispatchToProps=(dispatch)=>{
   return {
             handleInputFocus(list){
-              (list.size==0)&&dispatch(actionCreators.getList());/* 用了thunk中间件，action可以是一个函数 */
+              (list.size===0)&&dispatch(actionCreators.getList());/* 用了thunk中间件，action可以是一个函数 */
               dispatch(actionCreators.searchFocus())
            },
           handleInputBlur(){   
